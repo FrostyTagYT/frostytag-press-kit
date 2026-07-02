@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrostyTagYT — Press Kit</title>
+  <meta name="description" content="Press kit for FrostyTagYT — Gorilla Tag creator, community builder, and Another Axiom creator applicant.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080c;
+      --bg-card: #111118;
+      --bg-card-hover: #15151f;
+      --text: #f0f0f5;
+      --text-muted: #9a9aad;
+      --green: #39ff14;
+      --green-dim: rgba(57, 255, 20, 0.15);
+      --purple: #a855f7;
+      --purple-dim: rgba(168, 85, 247, 0.15);
+      --cyan: #22d3ee;
+      --cyan-dim: rgba(34, 211, 238, 0.12);
+      --border: rgba(255, 255, 255, 0.06);
+      --glow-green: 0 0 40px rgba(57, 255, 20, 0.2);
+      --glow-purple: 0 0 40px rgba(168, 85, 247, 0.2);
+      --radius: 16px;
+      --max-width: 720px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient background */
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .ambient::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(57, 255, 20, 0.08) 0%, transparent 70%);
+    }
+
+    .ambient::after {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 50%;
+      height: 50%;
+      background: radial-gradient(ellipse, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 3rem;
+      text-align: center;
+    }
+
+    .avatar-wrap {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .avatar-ring {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--green), var(--cyan), var(--purple), var(--green));
+      animation: spin 8s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .avatar {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a28 0%, #0d0d14 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--bg);
+      overflow: hidden;
+    }
+
+    .avatar svg {
+      width: 70%;
+      height: 70%;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 10vw, 3.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      background: linear-gradient(135deg, var(--text) 30%, var(--green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--cyan);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .ingame-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--purple-dim);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--purple);
+      margin-bottom: 1.75rem;
+    }
+
+    .ingame-badge span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .hero-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 100px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-link.tiktok {
+      background: var(--green-dim);
+      color: var(--green);
+      border: 1px solid rgba(57, 255, 20, 0.35);
+    }
+
+    .hero-link.tiktok:hover {
+      box-shadow: var(--glow-green);
+    }
+
+    .hero-link.youtube {
+      background: var(--cyan-dim);
+      color: var(--cyan);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+    }
+
+    .hero-link.youtube:hover {
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.2);
+    }
+
+    .hero-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      transition: border-color 0.25s, background 0.25s;
+    }
+
+    .card:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .card.accent-green:hover {
+      border-color: rgba(57, 255, 20, 0.25);
+      box-shadow: var(--glow-green);
+    }
+
+    .card.accent-purple:hover {
+      border-color: rgba(168, 85, 247, 0.25);
+      box-shadow: var(--glow-purple);
+    }
+
+    .card.accent-cyan:hover {
+      border-color: rgba(34, 211, 238, 0.25);
+      box-shadow: 0 0 40px rgba(34, 211, 238, 0.15);
+    }
+
+    .card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .card h2 .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot.green { background: var(--green); box-shadow: 0 0 8px var(--green); }
+    .dot.purple { background: var(--purple); box-shadow: 0 0 8px var(--purple); }
+    .dot.cyan { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .card strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 400px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Content types */
+    .content-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .content-list li {
+      padding-left: 1rem;
+      border-left: 2px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .content-list li:hover {
+      border-left-color: var(--cyan);
+    }
+
+    .content-list .label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .content-list .desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Fit list */
+    .fit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .fit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .fit-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 6px var(--purple);
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .fit-list strong {
+      color: var(--text);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    a.contact-item:hover {
+      border-color: rgba(57, 255, 20, 0.3);
+      background: var(--green-dim);
+    }
+
+    .contact-item .platform {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    .contact-item .value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      text-align: right;
+      word-break: break-all;
+    }
+
+    a.contact-item .value {
+      color: var(--green);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2.5rem 0 1rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer span {
+      color: var(--purple);
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="grid-overlay"></div>
+
+  <div class="page">
+    <header class="hero">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <div class="avatar">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="50" cy="52" r="28" fill="#1e1e2e" stroke="#39ff14" stroke-width="2"/>
+            <ellipse cx="38" cy="46" rx="8" ry="10" fill="#2a2a3d"/>
+            <ellipse cx="62" cy="46" rx="8" ry="10" fill="#2a2a3d"/>
+            <circle cx="38" cy="46" r="4" fill="#39ff14"/>
+            <circle cx="62" cy="46" r="4" fill="#39ff14"/>
+            <ellipse cx="50" cy="58" rx="6" ry="4" fill="#a855f7"/>
+            <path d="M22 38 Q18 28 24 22 Q30 18 34 28" fill="#2a2a3d" stroke="#39ff14" stroke-width="1.5"/>
+            <path d="M78 38 Q82 28 76 22 Q70 18 66 28" fill="#2a2a3d" stroke="#39ff14" stroke-width="1.5"/>
+            <text x="50" y="88" text-anchor="middle" fill="#22d3ee" font-size="8" font-family="sans-serif" font-weight="bold">FROSTY</text>
+          </svg>
+        </div>
+      </div>
+
+      <h1>FrostyTagYT</h1>
+      <p class="tagline">Gorilla Tag Creator &amp; Community Builder</p>
+
+      <div class="ingame-badge">
+        <span>In-Game</span> FROSTYTAG28K
+      </div>
+
+      <div class="hero-links">
+        <a href="https://www.tiktok.com/@frostytagyt" class="hero-link tiktok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+          @frostytagyt
+        </a>
+        <a href="https://www.youtube.com/channel/UCzYo2j64w0JT5xIskS4g9bQ" class="hero-link youtube" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          YouTube
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="card accent-green">
+          <h2><span class="dot green"></span> About Me</h2>
+          <p>Gorilla Tag isn't a side thing for me — it's basically my whole online life. I fell in love with how wild and creative this game is, and I've built everything I do around that.</p>
+          <p>My content, my community, the lobbies I hang out in — it's all Gorilla Tag, all the time. When I'm not recording, I'm usually in public lobbies keeping the vibes good and making sure new players feel like they belong.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card accent-cyan">
+          <h2><span class="dot cyan"></span> My Audience &amp; Stats</h2>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-number">28.4k+</div>
+              <div class="stat-label">TikTok Followers</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">YouTube</div>
+              <div class="stat-label">Long-form Channel</div>
+            </div>
+          </div>
+          <p>I post regularly — short-form on TikTok, longer videos on YouTube, and live streams when I can. My viewers are mostly Gorilla Tag players who actually play the game and keep coming back for positive, chill content.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card accent-purple">
+          <h2><span class="dot purple"></span> What My Content Looks Like</h2>
+          <ul class="content-list">
+            <li>
+              <div class="label">TikTok</div>
+              <div class="desc">Quick, fun clips. Gameplay moments, updates, community stuff. Built for the scroll, but always on-brand.</div>
+            </li>
+            <li>
+              <div class="label">YouTube</div>
+              <div class="desc">Longer videos when there's something worth diving into. Updates, gameplay, whatever the community's talking about.</div>
+            </li>
+            <li>
+              <div class="label">Live Streams</div>
+              <div class="desc">Chill sessions in public lobbies. Well-moderated, welcoming, and focused on good vibes. No toxicity, no drama — just people having fun.</div>
+            </li>
+          </ul>
+          <p style="margin-top: 1rem;">Everything I put out stays positive. That's not a gimmick — it's how I actually run my channels and my lobbies.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card accent-green">
+          <h2><span class="dot green"></span> What Else I Bring</h2>
+          <p>I don't just post clips and call it a day. When Gorilla Tag drops an update, I break it down so players actually understand what's new and why it matters.</p>
+          <p>I make content that helps brand-new players feel less lost and more excited to jump in. If someone's confused about a change or nervous about their first lobby, I want my stuff to be the thing that makes them feel welcome.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card accent-purple">
+          <h2><span class="dot purple"></span> Why I'm a Good Fit for Another Axiom</h2>
+          <ul class="fit-list">
+            <li><strong>100% Gorilla Tag focus</strong> — This isn't one game among many on my channel. It's the game.</li>
+            <li><strong>Consistent branding</strong> — Same name, same vibe, same community across every platform.</li>
+            <li><strong>Solid reputation</strong> — Known in the community for running positive public lobbies and keeping things fun.</li>
+            <li><strong>Ready to rep officially</strong> — Early access coverage, event support, update promotion, whatever the team needs. I'm in.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card accent-cyan">
+          <h2><span class="dot cyan"></span> Contact</h2>
+          <div class="contact-grid">
+            <a href="https://www.tiktok.com/@frostytagyt" class="contact-item" target="_blank" rel="noopener">
+              <span class="platform">TikTok</span>
+              <span class="value">@frostytagyt</span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCzYo2j64w0JT5xIskS4g9bQ" class="contact-item" target="_blank" rel="noopener">
+              <span class="platform">YouTube</span>
+              <span class="value">FrostyTagYT</span>
+            </a>
+            <div class="contact-item">
+              <span class="platform">In-Game</span>
+              <span class="value">FROSTYTAG28K</span>
+            </div>
+            <a href="mailto:lukedonovanyoung2020@outlook.com" class="contact-item">
+              <span class="platform">Email</span>
+              <span class="value">lukedonovanyoung2020@outlook.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Press Kit — <span>FrostyTagYT</span> — Gorilla Tag Creator
+    </footer>
+  </div>
+</body>
+</html>
