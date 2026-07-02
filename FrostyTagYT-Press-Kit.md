@@ -19,9 +19,19 @@ Gorilla Tag isn't a side thing for me — it's basically my whole online life. I
 ## My Audience & Stats
 
 - **TikTok:** [@frostytagyt](https://www.tiktok.com/@frostytagyt) — **28,400+ followers**
+- **Top video views:** **52k+** on best-performing TikTok clips
 - **YouTube:** [FrostyTagYT](https://www.youtube.com/channel/UCzYo2j64w0JT5xIskS4g9bQ)
 - **Posting schedule:** Regular short-form on TikTok, longer videos on YouTube, plus live streams when I can
 - **Who watches:** Mostly Gorilla Tag players — kids, teens, and adults who actually play the game and keep coming back for positive, chill content
+
+---
+
+## Featured Content
+
+- [Bro thinks I'm cheating](https://www.tiktok.com/@frostytagyt/video/7614776489686469902) — **52.5k views** (TikTok)
+- [New Eggy Critters cosmetics](https://www.tiktok.com/@frostytagyt/video/7632720425159609614) — **49.6k views** (TikTok)
+- [I Got Bored — After Effects edit](https://www.tiktok.com/@frostytagyt/video/7618849974142422285) — **43.5k views** (TikTok)
+- [All Gorilla Tag Easter Egg Locations](https://www.youtube.com/watch?v=KQIz-53dTCk) — full guide (YouTube)
 
 ---
 
